@@ -1,4 +1,4 @@
-# Ejercicio-Relación de composición entre clases (Triangulo)
+# Ejercicio-Relación de composición entre clases (Triángulo)
 
 ## Descripción del Problema
 
