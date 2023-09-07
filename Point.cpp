@@ -5,41 +5,34 @@
 //Constructores
 Point::Point()
 {
-    x = 0;
-    y = 0;
 }
 
 Point::Point(double x, double y)
 {
-    this->x = x;
-    this->y = y;
 }
 
 //Getters
 double Point::getX()
 {
-    return x;
+    return 0.0;
 }
 
 double Point::getY()
 {
-    return y;
+    return 0.0;
 }
 
 //Setters
 void Point::setX(double x)
 {
-    this->x = x;
 }
 
 void Point::setY(double y)
 {
-    this->y = y;
 }
 
-//Distancia entre el punto actual y otro punto
-
+//Distancia entre el punto actual y el punto enviado como parámetro
 double Point::distance(Point p)
 {
-    return sqrt(pow(getX()-p.getX(),2)  +  pow( (getY()-p.getY()),2));
+    return 0;
 }
