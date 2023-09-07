@@ -12,6 +12,13 @@ donde:
 
 $$s=\frac{a+b+c}{2}$$
 
+## Ejemplo de ejecución
+```
+Dados los puntos:
+P1=(3,1) P2=(1,2) P3=(4,4)
+El perimetro del triangulo es:9.0039
+El Area del triangulo es:3.5
+```
 ## Diagrama de Clases
 
 ```mermaid
