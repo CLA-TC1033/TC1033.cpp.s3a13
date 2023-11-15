@@ -30,7 +30,7 @@ classDiagram
       Clase: +op2()
 ```
 
-Referencia Diagramas de clase UML: https://mermaid-js.github.io/mermaid/#/classDiagram
+Referencia: [Diagramas de clase UML](https://mermaid.js.org/syntax/classDiagram.html)
 
 ## Objetivo
 
