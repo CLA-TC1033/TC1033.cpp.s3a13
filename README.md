@@ -31,13 +31,30 @@ classDiagram
 ```
 [Diagramas de clase en el lenguaje Mermaid](https://mermaid.js.org/syntax/classDiagram.html)
 
-## Prompt para generar el Diagrama de Clases con IA - mermAID
+## Prompt para generar el Diagrama de Clases UML con IA - mermAID
+
+Para generar automáticamente el Diagrama de Clases a partir de los archivos de clases (`.cpp` y `.hpp`) haga lo siguiente:
+
+1. Localice la extensión `mermAID` del lado izquierdo de la barra de herramientas. Dé clic sobre ella.
+2. Dé clic sobre el ícono `Continue in Chat` para iniciar una sesión de `mermAId` en el Chat de Copilot.
+3. Arrastre los archivos `.cpp` y `.hpp` que desea diagramar del Explorador de Archivos a la caja de diálogo del Chat de Copilot. Este será el contexto de la IA para usar mermAID.
+4. Seleccione el modo `Ask` y el modelo `GPT4.1`. Capture el siguiente prompt:
+
 ```
 @mermaid /uml
 ```
+5. Valida (y corrige si es necesario) el Diagrama de clases UML generado. Después, copia y pega el código `markdown` generado en el espacio correspondiente de este archivo `README.md`.
+
 ## Diagrama de clases UML con draw.io
 
-El repositorio está configurado para crear Diagramas de clases UML con ```draw.io```. Para usarlo simplemente das doble clic en el archivo  ```uml.class.drawio.png``` y se activará el editor ```draw.io``` incrustado en ```VSCode``` para edición. Asegúrate de agregar las formas UML en el menú de formas del lado izquierdo (opción ```+Más formas```). Al final insertas el archivo ```uml.class.drawio.png``` en apartado de UML de este archivo README.
+El repositorio está configurado para crear Diagramas de clases UML con ```draw.io```. Para usarlo, sigue estos pasos:
+
+1. Localiza el archivo ```uml.class.drawio.png``` en el explorador de archivos.
+2. Da doble clic sobre el archivo ```uml.class.drawio.png``` para abrir el editor ```draw.io``` incrustado en ```VSCode```.
+3. Agrega las formas UML necesarias desde el menú de formas del lado izquierdo (selecciona la opción ```+Más formas```).
+4. Crea tu diagrama de clases UML utilizando las formas agregadas.
+5. Guarda los cambios en el archivo ```uml.class.drawio.png```.
+6. Inserta el archivo ```uml.class.drawio.png``` en el apartado de UML de este archivo README.
 
 Para más información consulta el [MarketPlace](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio).
 
