@@ -14,11 +14,34 @@ TEST_CASE("Ex1", "[Constructor de Trianglo por default]")
     Triangle t;
 
     SECTION("Construyendo triangulo por default") {
+        INFO("FUNCIONALIDAD ESPERADA: Se espera que el constructor por default de Triangle inicialice los vértices con los valores (0,0), (50,30) y (25,10).");
+        INFO("PROGRAMACIÓN: Debes tener un constructor Triangle::Triangle() que asigne los valores correctos a vertex1, vertex2 y vertex3.");
+        INFO("SUGERENCIA DE PROGRAMACIÓN: Verifica que los valores asignados en el constructor por default coincidan exactamente con los esperados y que uses el tipo Point para cada vértice.");
         REQUIRE(t.getVertex1().getX()==0);
+
+        INFO("FUNCIONALIDAD ESPERADA: El vértice 1 debe tener coordenada y igual a 0.");
+        INFO("PROGRAMACIÓN: El método getVertex1() debe retornar un Point con y igual a 0.");
+        INFO("SUGERENCIA DE PROGRAMACIÓN: Asegúrate de inicializar correctamente el valor y del primer vértice en el constructor.");
         REQUIRE(t.getVertex1().getY()==0);
+
+        INFO("FUNCIONALIDAD ESPERADA: El vértice 2 debe tener coordenada x igual a 50.");
+        INFO("PROGRAMACIÓN: El método getVertex2() debe retornar un Point con x igual a 50.");
+        INFO("SUGERENCIA DE PROGRAMACIÓN: Revisa la asignación de vertex2 en el constructor por default.");
         REQUIRE(t.getVertex2().getX()==50);
+
+        INFO("FUNCIONALIDAD ESPERADA: El vértice 2 debe tener coordenada y igual a 30.");
+        INFO("PROGRAMACIÓN: El método getVertex2() debe retornar un Point con y igual a 30.");
+        INFO("SUGERENCIA DE PROGRAMACIÓN: Verifica que el segundo punto se inicialice correctamente.");
         REQUIRE(t.getVertex2().getY()==30);
+
+        INFO("FUNCIONALIDAD ESPERADA: El vértice 3 debe tener coordenada x igual a 25.");
+        INFO("PROGRAMACIÓN: El método getVertex3() debe retornar un Point con x igual a 25.");
+        INFO("SUGERENCIA DE PROGRAMACIÓN: Asegúrate de asignar el valor correcto a vertex3 en el constructor.");
         REQUIRE(t.getVertex3().getX()==25);
+
+        INFO("FUNCIONALIDAD ESPERADA: El vértice 3 debe tener coordenada y igual a 10.");
+        INFO("PROGRAMACIÓN: El método getVertex3() debe retornar un Point con y igual a 10.");
+        INFO("SUGERENCIA DE PROGRAMACIÓN: Revisa la inicialización del tercer vértice en el constructor.");
         REQUIRE(t.getVertex3().getY()==10);
     }
 }
@@ -28,11 +51,34 @@ TEST_CASE("Ex2", "[Constructor de Trianglo con puntos]")
     Triangle t=Triangle(Point(3,1), Point(1,2), Point(4,4));
 
     SECTION("Construyendo triangulo por default") {
+        INFO("FUNCIONALIDAD ESPERADA: El constructor de Triangle debe aceptar tres objetos Point y asignarlos correctamente a los vértices.");
+        INFO("PROGRAMACIÓN: Constructor Triangle::Triangle(Point, Point, Point) y métodos getVertex1, getVertex2, getVertex3.");
+        INFO("SUGERENCIA DE PROGRAMACIÓN: Asegúrate de que los parámetros del constructor se asignen directamente a los atributos vertex1, vertex2 y vertex3.");
         REQUIRE(t.getVertex1().getX()==3);
+
+        INFO("FUNCIONALIDAD ESPERADA: El vértice 1 debe tener coordenada y igual a 1.");
+        INFO("PROGRAMACIÓN: El método getVertex1() debe retornar un Point con y igual a 1.");
+        INFO("SUGERENCIA DE PROGRAMACIÓN: Verifica que el valor y del primer parámetro se asigne correctamente.");
         REQUIRE(t.getVertex1().getY()==1);
+
+        INFO("FUNCIONALIDAD ESPERADA: El vértice 2 debe tener coordenada x igual a 1.");
+        INFO("PROGRAMACIÓN: El método getVertex2() debe retornar un Point con x igual a 1.");
+        INFO("SUGERENCIA DE PROGRAMACIÓN: Asegúrate de pasar correctamente el segundo parámetro al atributo vertex2.");
         REQUIRE(t.getVertex2().getX()==1);
+
+        INFO("FUNCIONALIDAD ESPERADA: El vértice 2 debe tener coordenada y igual a 2.");
+        INFO("PROGRAMACIÓN: El método getVertex2() debe retornar un Point con y igual a 2.");
+        INFO("SUGERENCIA DE PROGRAMACIÓN: Verifica la asignación del valor y del segundo parámetro.");
         REQUIRE(t.getVertex2().getY()==2);
+
+        INFO("FUNCIONALIDAD ESPERADA: El vértice 3 debe tener coordenada x igual a 4.");
+        INFO("PROGRAMACIÓN: El método getVertex3() debe retornar un Point con x igual a 4.");
+        INFO("SUGERENCIA DE PROGRAMACIÓN: Revisa que el tercer parámetro se asigne correctamente a vertex3.");
         REQUIRE(t.getVertex3().getX()==4);
+
+        INFO("FUNCIONALIDAD ESPERADA: El vértice 3 debe tener coordenada y igual a 4.");
+        INFO("PROGRAMACIÓN: El método getVertex3() debe retornar un Point con y igual a 4.");
+        INFO("SUGERENCIA DE PROGRAMACIÓN: Asegúrate de que el valor y del tercer parámetro se asigne correctamente.");
         REQUIRE(t.getVertex3().getY()==4);
     }
 }
@@ -42,8 +88,10 @@ TEST_CASE("Ex3", "[Perimetro de un triangulo]")
     Triangle t=Triangle(Point(3,1), Point(1,2), Point(4,4));
 
     SECTION("Calculando el perimetro del Triangulo") {
+        INFO("FUNCIONALIDAD ESPERADA: El método perimeter() debe calcular la suma de las distancias entre los tres vértices del triángulo.");
+        INFO("PROGRAMACIÓN: Método: double perimeter(). Debe retornar la suma de las distancias entre vertex1-vertex2, vertex2-vertex3 y vertex3-vertex1.");
+        INFO("SUGERENCIA DE PROGRAMACIÓN: Usa el método distance de la clase Point para calcular las distancias y suma los tres lados. Asegúrate de que el resultado tenga la precisión esperada.");
         REQUIRE(std::to_string(t.perimeter())=="9.003897");
-        
     }
 }
 
@@ -52,8 +100,10 @@ TEST_CASE("Ex4", "[Area de un triangulo]")
     Triangle t=Triangle(Point(3,1), Point(1,2), Point(4,4));
 
     SECTION("Calculando el area del Triangulo") {
+        INFO("FUNCIONALIDAD ESPERADA: El método area() debe calcular el área del triángulo usando la fórmula de Herón.");
+        INFO("PROGRAMACIÓN: Método: double area(). Debe calcular el semiperímetro y luego aplicar la fórmula sqrt(s*(s-a)*(s-b)*(s-c)).");
+        INFO("SUGERENCIA DE PROGRAMACIÓN: Calcula correctamente las distancias entre los vértices, el semiperímetro y utiliza la función sqrt para obtener el área. Verifica la precisión del resultado.");
         REQUIRE(std::to_string(t.area())=="3.500000");
-        
     }
 }
 
